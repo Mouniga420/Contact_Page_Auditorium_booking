@@ -1,0 +1,201 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #392a6c;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Dark Mode */
+body.dark {
+  background-color: #1a202c;
+  color: #f4f4f4;
+}
+
+/* Section Styling */
+section {
+  padding: 6rem 0;
+  background-color: #f9f9f9;
+}
+
+/* Dark Mode Section */
+body.dark section {
+  background-color: #2d3748;
+}
+
+/* Layout Container */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns layout */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Contact Info Styling */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.space-y-2 {
+  margin-top: 200px;
+}
+
+.p-6 {
+  padding: 24px;
+}
+
+.space-y-6 > p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4b5563;
+  margin-right: 1rem;
+}
+
+body.dark svg {
+  color: #e2e8f0;
+}
+
+/* Form Styling */
+.space-y-6 {
+  margin-top: 100px;
+}
+
+form {
+  margin-left: auto;
+  margin-right: 0;
+  width: 100%; /* Set the form width as needed */
+  max-width: 600px; /* Optional: max width for the form */
+}
+
+.text-sm {
+  font-size: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.p-3 {
+  padding: 12px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.dark\:bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+
+input, textarea {
+  padding: 0.75rem;
+  font-size: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  color: #333;
+  margin-bottom: 2rem; /* Adds gap between input fields */
+}
+
+
+/* Dark Mode Inputs */
+body.dark input,
+body.dark textarea {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Focus Styling for Inputs */
+input:focus,
+textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+  padding: 0.75rem 3rem;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 1.125rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #5c54e4;
+}
+
+/* Dark Mode Button */
+body.dark button {
+  background-color: #6c63ff;
+}
+
+body.dark button:hover {
+  background-color: #5c54e4;
+}
+
+/* Success/Error Messages */
+.text-green-500 {
+  color: #10b981;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.text-red-500 {
+  color: #ef4444;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stacks contact info and form on top of each other */
+    padding: 0 1rem;
+  }
+
+  .md\\:divide-x {
+    display: block;
+  }
+
+  /* Contact Info Section on Smaller Screens */
+  .contact-info {
+    margin-bottom: 2rem; /* Adding space between contact info and form */
+  }
+}
